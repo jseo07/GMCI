@@ -23,8 +23,12 @@ learning_rate = 0.5
 def get_user_rating(image_num):
     
     print("For image number ", image_num+1, ",")
-    r = int(input("Enter your rating:"))
-    return r
+    r = input("Enter your rating (enter quit to stop):")
+    if r == "quit":
+      print("terminated")
+      exit()
+    else:
+      return int(r)
 
 
 def plot_images(images):
